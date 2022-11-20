@@ -508,6 +508,9 @@ class ArgHandler:
                     versionpath = os.path.join(self.imp_db_path, str(DBBACKEND))
                     with open(versionpath, "w") as version_file:
                         version_file.write(dbid)
+                    namepath = os.path.join(self.imp_db_path, str(NAME_FILE))
+                    with open(namepath, "w") as name_file:
+                        name_file.write("")
 
                 try:
                     self.smgr.open_activate(self.imp_db_path, self.username, self.password)
